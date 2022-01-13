@@ -10,32 +10,78 @@ body {
   color: black;
   font-family: 'Cormorant Garamond', serif;
   background-color: var(--color-background-grey);
+  width: 100%;
+  height: 100%;
 }
-header {
+nav {
   margin: 1rem 2rem;
-}
-header ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
   list-style: none;
 }
-header ul:first-child {
-  /* display: flex; */
-  justify-content: start;
-}
 
-header ul li {
+nav ul li {
   margin: 1rem;
+  gap: .5rem;
 }
-header ul li a {
+nav ul li a {
   color: black;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
 }
-header ul li:last-child a {
+nav ul li:last-child a {
   background: black;
   color: var(--color-background-grey);
   padding: .5rem 1rem;
   border-radius: .15rem;
+}
+
+.container {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: .2fr 1fr 1fr .2fr;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.container h2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  font-size: 7rem;
+}
+.container h3 {
+  grid-column: 2/2;
+  grid-row: 3/4;
+
+  font-size: 3.6rem;
+}
+.container p {
+  grid-column: 2/3;
+  grid-row: 4/5;
+
+  font-size: 1.2rem;
+}
+.container img {
+  grid-column: 3/4;
+  grid-row: 2/5;
+  width: 320px;
+}
+
+.container .img-n1 {
+  z-index: -1;
+  position: relative;
+  left: -150px;
+}
+.container .img-n2 {
+  position: relative;
+  left: 120px;
 }
